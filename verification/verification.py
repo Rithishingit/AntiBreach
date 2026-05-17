@@ -1,6 +1,11 @@
 
 import json
 import os
+import sys
+
+# Add the project root to the python path to allow importing modules correctly
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from ingestion.hasher.hasher import hash_log
 from ingestion.merkle.merkle import build_merkle_tree
 from ingestion.signer.signer import verify_signature
